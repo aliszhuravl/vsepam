@@ -1,0 +1,119 @@
+.accordion {
+  width: 100%;
+  border-bottom: none;
+  border-bottom: none;
+}
+
+.accordion__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.accordion__btn {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: none;
+  padding: 5px 20px;
+  height: auto;
+  min-height: 28px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  text-decoration: none;
+  color: $color-black;
+  transition: all .15s;
+  cursor: default;
+  border-bottom: none;
+    .accordion__text {
+      font-family: $font-family_semibold;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+        img {
+          margin-right: 6px;
+        }
+    }
+
+  &:before { /* vertical element */
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: calc(50% - 10px);
+    transform: rotate(45deg);
+    will-change: transform, width;
+    transition: all .15s;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-right: 2px solid #C6C6C6;
+    border-bottom: 2px solid #C6C6C6;
+    z-index: 1;
+  }
+}
+
+.accordion__content {
+  opacity: 0;
+}
+
+
+.accordion__item_open {
+
+  & .accordion__btn {
+    background-color: transparent;
+    border-bottom: none;
+
+    &:before {
+      transform: rotate(-135deg);
+    }
+  }
+
+  & .accordion__content {
+    opacity: 1;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    .form__checkbox {
+      display: block;
+    }
+  }
+}
+
+.accordion__content {
+  display: none;
+  padding: 10px 0 10px 0;
+  border-bottom: none;
+  background-color: transparent;
+  will-change: height;
+    .list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+}
+
+.accordion__text {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 16px;
+  font-family: $font-family;
+  padding-left: 0;
+  font-weight: normal;
+  left: 0;
+  position: absolute;
+}
+
+@media (max-width: 640px) {
+  .accordion__btn:before {
+    right: 12px;
+  }
+  .accordion__btn:after {
+    right: 6px;
+  }
+}

@@ -1,0 +1,33 @@
+.link {
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  transition: color, .2s;
+  color: $color-black;
+
+  &:hover {
+    color: $color-green;
+  }
+
+  &:focus,
+  &:active {
+    outline: 0;
+    text-decoration: none;
+  }
+}
+
+.link_white {
+  color: $color-white;
+    &:hover {
+      opacity: 0.5;
+      color: $color-white;
+    }
+}
+
+.link_green {
+  color: $color-green;
+    &:hover {
+      opacity: 0.5;
+      color: $color-white;
+    }
+}

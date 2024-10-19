@@ -1,0 +1,173 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  height: 36px;
+  padding: 5px 12px;
+  border-radius: 7px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $color-green;
+  background-color: $color-green;
+  color: #fff;
+  font-family: $font-family_bold;
+  font-size: 14px;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  outline: 0;
+  box-shadow: none;  
+
+  transition: all 0.2s;
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    transition: all 0.2s;
+  }
+  
+  &:active {
+    background-color: darken($color-gray-10, 5%);
+  }
+}
+
+.btn_simple {
+  background-color: #fff;
+  border-color: #DFDFDF;
+  color: #696969;
+  &:hover,
+  &:focus {
+    border-color: $color-gray-40;
+    background-color: $color-gray-10;
+    transition: all 0.2s;
+  }
+}
+
+.btn_simple_green {
+  background-color: #fff;
+  border-color: $color-green;
+  color: $color-green;
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+      transition: all 0.2s;
+    }
+}
+
+.btn_go {
+  background-image: url('../img/go.svg');
+  padding-right: 24px;
+  background-repeat: no-repeat;
+  background-position: 94% center;
+}
+
+.btn_gray {
+  background-color: #444444;
+  color: $color-white;
+  border-color: #444444;
+  border-radius: 7px;
+  height: 42px;
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+    text-decoration: none;
+    background-color: $color-green;
+    transition: all 0.2s;
+    border-color: $color-green;
+  }
+}
+
+.btn_disabled {
+  border-color: $color-gray-40;
+  background-color: $color-gray-10;
+  color: $color-gray-60;
+  cursor: default;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border-color: $color-gray-40;
+    background-color: $color-gray-10;
+    color: $color-gray-60;
+  }
+}
+
+.btn_standart {
+  border-color: $color-blue-30;
+  background-color: $color-blue-30;
+  color: $color-white;
+
+  &:hover,
+  &:focus {
+    border-color: $color-blue-50;
+    background-color: $color-blue-50;
+  }
+
+  &:active {
+    border-color: darken($color-blue-50, 5%);
+    background-color: darken($color-blue-50, 5%);
+  }
+}
+
+
+.btn_attach {
+  position: relative;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  outline: 0;
+  color: $color-blue-30;
+  font-family: $font-family_bold;
+  overflow: hidden;
+  cursor: pointer;
+  
+  &:hover {
+    color: $color-blue-50;
+  }
+
+  & > input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  &.btn_disabled > input[type=file] {
+    display: none;
+  }
+}
+
+.btn_upload {
+  overflow: hidden;
+
+  & > input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  &.btn_disabled > input[type=file] {
+    display: none;
+  }
+}
