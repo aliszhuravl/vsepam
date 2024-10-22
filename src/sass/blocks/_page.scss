@@ -15,6 +15,10 @@
   flex-grow: 1;
 }
 
+.slick-slider {
+  overflow: hidden;
+}
+
 .page__inner {
   @extend .layout-inner;
   display: flex;
@@ -23,7 +27,6 @@
 }
 
 .page__item {
-  @extend .layout-padding;
   padding-top: 30px;
   display: flex;
   align-items: stretch;
@@ -455,6 +458,10 @@
 
 @media (max-width: 1199px) {
 
+  .page__item {
+    padding: 0 20px;
+  }
+
   .page-container {
     padding-bottom: 60px;
   }
@@ -573,6 +580,10 @@
 
 
 @media (max-width: 640px) {
+
+  .page__item {
+    padding: 0 16px;
+  }
 
   .adv_block {
     flex-direction: column-reverse;

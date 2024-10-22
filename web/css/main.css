@@ -770,6 +770,10 @@ h3 {
 	flex-grow: 1;
 }
 
+.slick-slider {
+	overflow: hidden;
+}
+
 .page__inner {
 	display: flex;
 	flex-direction: column;
@@ -1543,7 +1547,6 @@ h3 {
 }
 
 .layout-padding,
-.page__item,
 .footer__inner {
 	padding-right: 20px;
 	padding-left: 20px;
@@ -2795,7 +2798,6 @@ h3 {
 }
 
 .layout-padding,
-.page__item,
 .footer__inner {
 	padding-right: 20px;
 	padding-left: 20px;
@@ -2833,6 +2835,10 @@ h3 {
 
 .sidebar {
 	display: none;
+}
+
+.page__item {
+	padding: 0 20px;
 }
 
 .page-container {
@@ -2967,6 +2973,10 @@ h3 {
 }
 
 @media (max-width: 640px) {
+
+.page__item {
+	padding: 0 16px;
+}
 
 .adv_block {
 	flex-direction: column-reverse;
@@ -3172,7 +3182,6 @@ h2 {
 }
 
 .layout-padding,
-.page__item,
 .footer__inner {
 	padding-right: 16px;
 	padding-left: 16px;
