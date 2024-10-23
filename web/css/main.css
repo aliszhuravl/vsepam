@@ -573,6 +573,11 @@ th {
 	color: #959595;
 }
 
+.icon-rait:before {
+	content: '\e919';
+	color: #fff;
+}
+
 *,
 *:before,
 *:after {
@@ -698,6 +703,7 @@ h3 {
 
 .panel_item a {
 	position: relative;
+	text-decoration: none;
 }
 
 .panel_item a span.quantity {
@@ -713,6 +719,26 @@ h3 {
 	background-color: #52ad60;
 	align-items: center;
 	justify-content: center;
+}
+
+.panel_item a span.icon-rait {
+	font-size: 18px;
+}
+
+.panel_item a span.icon-raiting {
+	font-size: 22px;
+}
+
+.panel_item a span.icon-raiting:before {
+	color: #fff;
+}
+
+.panel_item a span.icon-crt {
+	font-size: 22px;
+}
+
+.panel_item a span.icon-crt:before {
+	color: #fff;
 }
 
 .panel_item:hover {
