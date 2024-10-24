@@ -4,7 +4,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Все памятники</title>
 </head>
@@ -30,7 +29,10 @@
             <div class="header_bottom">
                 <div class="header__inner">
                     <div class="logo">
-                        <a href="index.html"><img src="img/logo.svg" alt=""></a>
+                        <a class="logo_link" href="index.html">
+                        <img class="logo_pic" src="img/logo_0.svg" alt="">
+                        <img src="img/logo.svg" alt="">
+                        </a>
                     </div>
                     <div class="menu">
                         <ul class="nav__list">
@@ -42,7 +44,7 @@
                         </ul>
                     </div>
                     <div class="btns">
-                        <button class="btn btn_gray">Есть вопрос?</button>
+                        <a href="#modal_0" rel="modal:open" class="btn btn_gray">Есть вопрос?</a>
                         <input type="search" class="form__item search__item" placeholder="Поиск">
                     </div>
                     <div class="panel">
@@ -328,10 +330,10 @@
                             <div class="dropdown">
                                 <div class="dropdown__text">Материал</div>
                                 <ul class="dropdown__list tabs__buttons">
-                                    <li class="dropdown__item tabs__btn">Гранит черный</li>
-                                    <li class="dropdown__item tabs__btn">Гранит красный</li>
-                                    <li class="dropdown__item tabs__btn">Мрамор</li>
-                                    <li class="dropdown__item tabs__btn">Гранит серый</li>
+                                    <li class="dropdown__item"> <div class="material_icon"><img src="img/bg.jpg" alt=""></div>Гранит черный</li>
+                                    <li class="dropdown__item"> <div class="material_icon"><img src="img/bg.jpg" alt=""></div>Гранит красный</li>
+                                    <li class="dropdown__item"> <div class="material_icon"><img src="img/bg.jpg" alt=""></div>Мрамор</li>
+                                    <li class="dropdown__item"> <div class="material_icon"><img src="img/bg.jpg" alt=""></div>Гранит серый</li>
                                 </ul>
                             </div>
                             <div class="dropdown">
@@ -878,6 +880,8 @@
                 <div class="social">
                     <a href="#"><img src="img/vk.svg" alt=""></a>
                     <a href="#"><img src="img/zen.svg" alt=""></a>
+                    <a href="#"><img src="img/youtube.svg" alt=""></a>
+                    <a href="#"><img src="img/insta.svg" alt=""></a>
                 </div>
                 <div class="ya-rait">
                     <img src="img/ya.png" alt="">
@@ -940,6 +944,8 @@
                                     <div class="social">
                                         <a href="#"><img src="img/vk.svg" alt=""></a>
                                         <a href="#"><img src="img/zen.svg" alt=""></a>
+                                        <a href="#"><img src="img/youtube.svg" alt=""></a>
+                                        <a href="#"><img src="img/insta.svg" alt=""></a>
                                     </div>
                                     <div class="ya-rait">
                                         <img src="img/ya.png" alt="">
@@ -966,7 +972,7 @@
                 <div class="menu_body">
                     <div class="menu_body__inner">
                         <div class="menu_body__inner_top">
-                            <button class="btn btn_gray">Есть вопрос?</button>
+                            <a href="#modal_0" rel="modal:open" class="btn btn_gray">Есть вопрос?</a>
                             <input type="search" class="form__item search__item" placeholder="Поиск">
                         </div>
                         <div class="promos">
@@ -1167,10 +1173,33 @@
             <button class="close"><img src="img/close.svg" alt="#"></button>
         </div>
     </div>
+    <div class="popup_wrapper">
+        <div class="popup" id="modal_0">
+            <div class="close-modal"><div class="round_link"><img src="img/cross.svg" alt="x"></div></div>
+            <div class="popup_inner">
+                <p class="text_bold">Заказать консультацию</p>
+                <p>Введите ваши данные, и наш менеджер перезвонит вам в течение 5 минут</p>
+                <div class="pop_form">
+                    <div class="form_box">
+                        <input type="tel" class="form__item" placeholder="Ваше имя">
+                    </div>
+                    <div class="form_box">
+                        <input type="tel" class="form__item" placeholder="Ваш телефон">
+                    </div>
+                </div>
+                <div class="buttons_block">
+                    <button class="btn">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/libs/jquery/jquery-3.1.1.min.js"><\/script>')</script>
 <script src="js/libs/jquery.slick/slick.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="js/libs/jquery.fancybox/jquery.fancybox.min.js"></script>
+<script src="js/libs/jquery.modal/jquery.modal.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

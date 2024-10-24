@@ -1,3 +1,4 @@
+
 $('.dropdown').each(function () {
 
     // Cache the number of options
@@ -26,13 +27,9 @@ $('.dropdown').each(function () {
     // Updates the select element to have the value of the equivalent option
     $dropdownListItems.click(function(e) {
         e.stopPropagation();
-        $dropdownText.text($(this).text());
+        $dropdownText.html($(this).html());
         $dropdown.removeClass('dropdown_opened');
         $dropdownList.slideUp(150);
-        if($(this).hasClass('tabs__btn')){
-            $(this).addClass('tabs__btn_active').siblings().removeClass('tabs__btn_active');
-            $(this).closest('.tabs').find('.tabs__item').removeClass('active').eq($(this).index()).addClass('active');
-        }
     });
 
     // Hides the unordered list when clicking outside of it

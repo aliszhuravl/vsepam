@@ -44,6 +44,11 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
+            .btn {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
             .search__item {
               margin-left: 12px;
               width: -webkit-fill-available;
