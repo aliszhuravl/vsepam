@@ -1,0 +1,14 @@
+.tabs__item {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.tabs-cards {
+  .form_descr {
+    margin-bottom: 6px;
+    font-size: 12px;
+  }
+}

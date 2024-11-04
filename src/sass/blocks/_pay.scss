@@ -1,0 +1,215 @@
+.pay_tile {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+    &__item {
+      width: calc(33.333% - 14px);
+      margin-right: 20px;
+      display: flex;
+      padding: 32px;
+      background: rgba(234, 238, 243, 0.45);
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-bottom: 20px;
+      text-decoration: none;
+      border-radius: 12px;
+
+      .img {
+        margin-bottom: 12px;
+        width: auto;
+        height: 48px;
+        display: flex;
+        align-items: center;
+          img {
+            display: block;
+          }
+      }
+      p {
+        text-align: center;
+        font-size: 13px;
+        color: rgba(54, 54, 54, 0.4);
+        text-decoration: none;
+      }
+
+        &:nth-child(3n+3) {
+          margin-right: 0;
+        }
+
+        &:hover {
+          background-color: #fff;
+          @extend .box-shadow;
+        }
+    }
+}
+
+.pay_total {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.order {
+  font-size: 16px;
+}
+
+.card_method {
+  min-width: 850px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+    &__title {
+      width: 100%;
+      text-align: left;
+      margin-bottom: 32px;
+    }
+}
+
+.card_box {
+  width: 600px;
+  position: relative;
+  padding-bottom: 24px;
+  margin-bottom: 40px;
+  .card_main {
+    position: relative;
+    z-index: 2;
+    padding-top: 50px;
+    background-color: #F5F6F8;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    border-radius: 20px;
+    width: 440px;
+      .short {
+        max-width: 200px;
+        margin-bottom: 0;
+      }
+  }
+  .card_back {
+    padding-bottom: 30px;
+    border-radius: 20px;
+    width: 440px;
+    background-color: rgba(213, 219, 228, 0.45);
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-top: 40px;
+      .blackline {
+        width: 100%;
+        content: '';
+        height: 50px;
+        background-color: rgba(54, 54, 54, 0.75);
+        margin-bottom: 30px;
+      }
+      .short {
+        padding-right: 30px;
+        margin-bottom: 0;
+      }
+  }
+}
+
+.card_info {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px) center;
+}
+
+.card_info__mir {
+  background-image: url('../img/mir.svg');
+}
+
+.card_info__visa {
+  background-image: url('../img/visa.svg');
+}
+
+.card_info__mc {
+  background-image: url('../img/mc.svg');
+}
+
+.card_email {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+    .price_blue {
+      margin-right: 60px;
+    }
+}
+
+.payment_btns {
+  align-items: center;
+  justify-content: flex-end;
+    .price_blue {
+      font-size: 24px;
+      margin-right: 20px;
+    }
+}
+
+.error_payment {
+  img {
+    margin-bottom: 16px;
+  }
+  .semibold {
+    font-size: 16px !important;
+    color: $color-black !important;
+    margin-bottom: 12px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .pay_tile {
+    &__item {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+  .card_method {
+    min-width: unset;
+  }
+  .card_method__title {
+    margin-bottom: 20px;
+  }
+  .card_box {
+    padding-bottom: 0;
+    width: 100%;
+      .card_main {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .card_back {
+        width: 100%;
+        position: static;
+      }
+    .short {
+      width: 45%;
+    }
+  }
+  .card_email {
+    width: 100%;
+    flex-direction: column;
+      .price_blue {
+        margin-right: 0;
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
+  }
+  .payment_btns {
+    .price_blue {
+      margin-right: 0;
+      margin-bottom: 12px;
+    }
+    .btn {
+      width: 100%;
+    }
+  }
+}

@@ -12,8 +12,8 @@
 .hamburger__item {
   display: block;
   width: 28px;
-  height: 2px;
-  background: $color-green;
+  height: 1px;
+  background: $color-blue;
   transition: all 0.25s ease-out;
   border-radius: 3px;
 }
@@ -28,7 +28,7 @@
   margin: auto;
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
-  background-color: $color-green;
+  background-color: $color-blue;
 
   &:before,
   &:after {
@@ -55,13 +55,13 @@
 
     &:after {
       transform: rotate(45deg);
-      background: $color-green;
+      background: $color-blue;
       top: 0;
     }
     &:before {
       transform: rotate(-45deg);
       top: 0;
-      background: $color-green;
+      background: $color-blue;
     }
   }
 }

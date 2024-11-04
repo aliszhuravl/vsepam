@@ -1,0 +1,193 @@
+.h1_law {
+  font-size: 36px;
+  line-height: normal;
+}
+
+.contents {
+  width: 100%;
+  padding: 0 90px;
+  margin-bottom: 40px;
+    &_title {
+      h2 {
+        font-size: 24px;
+        line-height: normal;
+      }
+    }
+    &_body {
+      .link {
+        text-decoration: underline;
+        margin-bottom: 12px;
+      }
+    }
+}
+
+// слили страницы закона
+
+.law_text {
+  padding: 0 90px;
+  max-width: 1080px;
+
+  h2 {
+    font-size: 24px;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: normal;
+    margin-bottom: 16px;
+  }
+
+  ol {
+    margin-left: 0;
+    padding-left: 20px;
+    color: rgba(54, 54, 54, .5);
+    margin-bottom: 30px;
+    li {
+      p {
+        color: rgba(54, 54, 54, .5);
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  q {
+    margin-bottom: 30px;
+    padding: 8px 0 8px 20px;
+    border-left: 3px solid $color-blue;
+    display: block;
+    font-family: $font-family_medium;
+    max-width: 800px;
+  }
+
+  p {
+    color: rgba(54, 54, 54, .5);
+    margin-bottom: 12px;
+  }
+
+  b {
+    font-family: $font-family_semibold;
+    color: $color-black;
+  }
+
+  ul {
+    margin: 20px 0 40px 0;
+    padding-left: 25px;
+    list-style-type: none;
+    li {
+      margin-bottom: 8px;
+      position: relative;
+      p {
+        font-size: 16px;
+        color: $color-black;
+        font-family: $font-family_medium;
+      }
+      &:before {
+        width: 6px;
+        height: 6px;
+        background-color: $color-blue;
+        content: '';
+        margin: 0 16px 0 0;
+        position: absolute;
+        left: -25px;
+        top: 6px;
+      }
+    }
+  }
+
+  .ol_blue {
+    margin-bottom: 20px;
+    counter-reset: myCounter;
+    padding: 0;
+    li {
+      list-style: none;
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 8px;
+      p {
+        font-size: 16px;
+        color: $color-black;
+        font-family: $font-family_medium;
+      }
+      &:before {
+        counter-increment: myCounter;
+        content:counter(myCounter)'.';
+        color: $color-blue;
+        margin: 0 16px 0 0;
+        font-family: $font-family_medium;
+      }
+    }
+  }
+
+}
+
+
+
+
+@media (max-width: 1199px) {
+  .catalog__box_item {
+    height: auto;
+    min-height: 48px;
+  }
+  .h1_law {
+    font-size: 24px;
+  }
+  .contents {
+    padding: 0 40px;
+    &_title {
+      h2 {
+        font-size: 20px;
+        line-height: normal;
+      }
+    }
+  }
+
+  .law_text {
+    padding: 0 40px;
+  }
+
+}
+
+
+@media (max-width: 640px) {
+  .h1_law {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  .contents {
+    padding: 0;
+    margin-bottom: 24px;
+    &_title {
+      h2 {
+        font-size: 16px;
+        line-height: normal;
+      }
+    }
+    &_body {
+      .link {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .law_text {
+    padding: 0;
+  }
+
+  .law_text {
+    h2 {
+      font-size: 18px;
+    }
+    h3 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 14px;
+    }
+    q {
+      font-size: 14px;
+    }
+  }
+
+}

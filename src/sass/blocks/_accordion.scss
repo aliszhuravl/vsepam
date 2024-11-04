@@ -17,42 +17,44 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 60px;
   border-bottom: none;
-  padding: 5px 20px;
-  height: auto;
-  min-height: 28px;
-  margin-bottom: 8px;
+  padding: 12px 20px;
   background-color: transparent;
   text-decoration: none;
-  color: $color-black;
+  color: $color-blue;
   transition: all .15s;
+  will-change: background-color;
   cursor: default;
   border-bottom: none;
-    .accordion__text {
-      font-family: $font-family_semibold;
-      font-size: 16px;
-      display: flex;
-      align-items: center;
-        img {
-          margin-right: 6px;
-        }
-    }
 
   &:before { /* vertical element */
     content: '';
     display: block;
     position: absolute;
-    right: 0;
-    top: calc(50% - 10px);
-    transform: rotate(45deg);
+    right: 26px;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
     will-change: transform, width;
     transition: all .15s;
-    width: 10px;
-    height: 10px;
-    background-color: transparent;
-    border-right: 2px solid #C6C6C6;
-    border-bottom: 2px solid #C6C6C6;
+    width: 1px;
+    height: 15px;
+    background-color: $color-blue;
     z-index: 1;
+  }
+
+  &:after { /* horizontal element */
+    content: '';
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    will-change: transform;
+    transition: all .15s;
+    width: 15px;
+    height: 1px;
+    background-color: $color-blue;
   }
 }
 
@@ -68,7 +70,7 @@
     border-bottom: none;
 
     &:before {
-      transform: rotate(-135deg);
+      height: 1px;
     }
   }
 
@@ -90,11 +92,6 @@
   border-bottom: none;
   background-color: transparent;
   will-change: height;
-    .list {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
 }
 
 .accordion__text {
@@ -102,7 +99,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
   font-size: 16px;
-  font-family: $font-family;
+  font-family: $font-family_medium;
   padding-left: 0;
   font-weight: normal;
   left: 0;

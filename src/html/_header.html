@@ -1,66 +1,52 @@
 <header class="header">
-        <div class="header_top">
-            <div class="header__inner">
-                <div class="left">
-                    <div class="left_textbox">
-                        <p>Работаем по всей России</p>
-                        <p>Пн-Вс 10:00 - 19:00</p>
-                    </div>
-                </div>
-                <div class="right">
-                    <div class="right_textbox">
-                        <a href="mailto:zakaz@vsepamyatniki.ru" class="link link_white">zakaz@vsepamyatniki.ru</a>
-                        <p>Петрозаводск, Березовая ал. 24</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="header_bottom">
-            <div class="header__inner">
-                <div class="logo">
-                    <a class="logo_link" href="index.html">
-                    <img class="logo_pic" src="img/logo_0.svg" alt="">
-                    <img src="img/logo.svg" alt="">
-                    </a>
-                </div>
-                <div class="menu">
-                    <ul class="nav__list">
-                        <li><a href="#" class="nav__link">Оплата и доставка</a></li>
-                        <li><a href="gallery.html" class="nav__link">Фото работ</a></li>
-                        <li><a href="#" class="nav__link">Установка</a></li>
-                        <li><a href="sale.html" class="nav__link link_green">Скидки %</a></li>
-                        <li><a href="contacts.html" class="nav__link">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="btns">
-                    <a href="#modal_0" rel="modal:open" class="btn btn_gray">Есть вопрос?</a>
-                    <input type="search" class="form__item search__item" placeholder="Поиск">
-                </div>
-                <div class="panel">
-                    <div class="panel_item">
-                        <a href="raiting.html">
-                            <span class="icon-rait"></span>
-                            <span class="quantity">4</span>
-                        </a>
-                    </div>
-                    <div class="panel_item">
-                        <a href="liked.html">
-                            <span class="icon-raiting"></span>
-                            <span class="quantity">4</span>
-                        </a>
-                    </div>
-                    <div class="panel_item">
-                        <a href="liked.html">
-                            <span class="icon-crt"></span>
-                            <span class="quantity">4</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="burger mobile" id="burger">
-                    <button class="hamburger">
+    <div class="header__inner">
+       <div class="header__inner_logo">
+           <a href="index.html"><img src="img/logo.svg" alt=""></a>
+       </div>
+        <div class="menu_box">
+            <div class="header__inner_menu">
+                <div class="burger">
+                    <button class="hamburger burger-desktop">
                         <span></span>
                     </button>
+                    <p>Наши услуги</p>
+                </div>
+                <div class="menu_desktop">
+                    <ul>
+                        <li><a href="service.html" class="link">Возражение на судебный приказ</a></li>
+                        <li><a href="service.html" class="link">Заявление о возбуждении ИП</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header__inner_about">
+                <a href="about.html" class="link link_black">О проекте</a>
+            </div>
+        </div>
+        <div class="header__inner_lang">
+            <div class="lang">
+                <div class="lang_rus">
+                    <img src="img/rus.svg" alt="">
+                    <p>RUS</p>
                 </div>
             </div>
         </div>
+        <div class="header__inner_search">
+            <input type="search" placeholder="Поиск по сайту" class="form__item search">
+        </div>
+        <div class="header__inner_enter">
+            <a class="btn btn_simple" href="reg.html">Регистрация</a>
+            <a class="btn" href="enter.html">Войти</a>
+        </div>
+        <div class="header__inner_profile">
+            <div class="my_orders">
+                <a href="lk.html" class="link link_black"><p>Мои дела</p><span>3</span></a>
+            </div>
+            <div class="my_lk"><a href="lk.html"><img src="img/foto.jpg" alt=""></a></div>
+        </div>
+        <div class="burger_mobile" id="burger">
+            <button class="hamburger burger-mobile">
+                <span></span>
+            </button>
+        </div>
+    </div>
 </header>

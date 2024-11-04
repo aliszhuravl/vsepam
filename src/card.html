@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    //= html/_head.html
+    <title>Введите платежную информацию</title>
+</head>
+<body>
+<div class="page-container page-subpage">
+    //= html/_header.html
+    <main class="page">
+
+        <div class="page__inner">
+            <section class="page__item">
+                <div class="centered_group process_group">
+
+                    <div class="enter_box centered_group_box">
+                        <div class="enter_box__title">
+                            <p>Введите платежную информацию</p>
+                        </div>
+                        <div class="enter_box__body card_method">
+                            <div class="card_method__title"><p class="semibold">Заполните данные банковской карты:</p></div>
+
+                            <div class="card_box">
+                                <div class="card_main">
+                                    <div class="form_box">
+                                        <div class="form_box__container">
+                                            <p class="form_descr">Номер карты</p>
+                                        </div>
+                                        <input type="text" class="form__item card_info card_info__mir" placeholder="Введите данные">
+                                    </div>
+                                    <div class="form_box short">
+                                        <div class="form_box__container">
+                                            <p class="form_descr">Срок действия</p>
+                                        </div>
+                                        <input type="text" class="form__item" placeholder="ММ / ГГ">
+                                    </div>
+                                </div>
+                                <div class="card_back">
+                                    <div class="blackline"></div>
+                                    <div class="form_box short">
+                                        <div class="form_box__container">
+                                            <p class="form_descr">Код CVC</p>
+                                        </div>
+                                        <input type="text" class="form__item" placeholder="CVC">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card_email">
+                                <p class="price_blue">ivanov@gmail.com</p>
+                                <p class="simple_p">После оплаты на этот email придет готовое Возражение на отмену судебного приказа и инструкция по отправке его в суд.</p>
+                            </div>
+
+
+                        </div>
+                        <div class="enter_box__btns process_btns payment_btns">
+                                <p class="price_blue">990 руб.</p>
+                                <button class="btn">Оплатить</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    //= html/_footer.html
+    //= html/_menu.html
+</div>
+//= html/_scripts.html
+</body>
+</html>

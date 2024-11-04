@@ -1,6 +1,6 @@
 .dropdown {
   position: relative;
-  width: 180px;
+  width: 200px;
 }
 
 .dropdown_opened > .dropdown__list {
@@ -35,22 +35,22 @@
 
 .dropdown__text {
   position: relative;
-  color: #696969;
+  color: $color-black;
   cursor: pointer;
-  padding: 5px 12px;
+  padding: 5px 20px;
   border: 1px solid $color-border;
-  border-radius: 7px;
+  border-radius: 12px;
   background-color: $color-white;
-  font-size: 14px;
-  height: 36px;
+  font-size: 16px;
+  height: 50px;
   display: flex;
   align-items: center;
 }
 
 .dropdown__text:after {
   position: absolute;
-  right: 12px;
-  top: 12px;
+  right: 20px;
+  top: 20px;
   width: 6px;
   height: 6px;
   content: '';

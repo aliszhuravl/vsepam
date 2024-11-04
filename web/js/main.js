@@ -80,34 +80,6 @@ window.onload = function() {
     smoothScroll( '#link-to-block' );
 
 })(jQuery);
-(function($) {
-    var Accordion = function(el, multiple) {
-        this.el = el || {};
-        this.multiple = multiple || false;
-
-        // Variable
-        var links = this.el.find('.accordion__btn');
-        // Event
-        links.on('click', {
-            el: this.el,
-            multiple: this.multiple
-        }, this.dropdown)
-    };
-
-    Accordion.prototype.dropdown = function(e) {
-        var $el = e.data.el;
-        $this = $(this);
-        $next = $this.next();
-
-        $next.slideToggle(150);
-        $this.parent().toggleClass('accordion__item_open');
-
-    };
-
-    var accordion = new Accordion($('.accordion'), false);
-
-})(jQuery);
-
 $('.dropdown').each(function () {
 
     // Cache the number of options
@@ -136,9 +108,13 @@ $('.dropdown').each(function () {
     // Updates the select element to have the value of the equivalent option
     $dropdownListItems.click(function(e) {
         e.stopPropagation();
-        $dropdownText.html($(this).html());
+        $dropdownText.text($(this).text());
         $dropdown.removeClass('dropdown_opened');
         $dropdownList.slideUp(150);
+        if($(this).hasClass('tabs__btn')){
+            $(this).addClass('tabs__btn_active').siblings().removeClass('tabs__btn_active');
+            $(this).closest('.tabs').find('.tabs__item').removeClass('active').eq($(this).index()).addClass('active');
+        }
     });
 
     // Hides the unordered list when clicking outside of it
@@ -147,63 +123,73 @@ $('.dropdown').each(function () {
         $dropdownList.slideUp(150);
     });
 });
-$(document).ready(function() {
-
-    $('.slider_main').slick({
-        dots: true,
-        infinite: true,
-        cssEase:'linear',
-        slidesToShow: 1,
-        arrows: false
-    });
-
-    $('.gallery_slider').slick({
-        dots: false,
-        infinite: true,
-        cssEase:'linear',
-        slidesToShow: 2,
-        arrows: false,
-        centerMode: true,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 1
-                }
-            },
-            {
-                breakpoint: 640,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
-        ]
-    });
-
-    $('.slider_catalog').slick({
-        dots: false,
-        infinite: true,
-        cssEase:'linear',
-        slidesToShow: 3,
-        arrows: false,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 640,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
-        ]
-    });
-});
 (function($) {
-    var hamburger = $('.burger');
+
+    $('.tabs').each( function() {
+
+        $('.tabs__buttons').on('click', '.tabs__btn:not(.tabs__btn_active)', function () {
+            $(this).addClass('tabs__btn_active').siblings().removeClass('tabs__btn_active');
+            $(this).closest('.tabs').find('.tabs__item').removeClass('active').eq($(this).index()).addClass('active');
+        });
+    });
+})(jQuery);
+(function($) {
+    var hamburger = $('.burger-desktop');
+    var body = $('body');
+
+    function hamburgerOpen() {
+        hamburger.addClass('hamburger_active');
+        $('.menu_desktop').addClass('menu_desktop_opened');
+    }
+
+    function hamburgerClose() {
+        hamburger.removeClass('hamburger_active');
+        $('.menu_desktop').removeClass('menu_desktop_opened');
+    }
+
+    hamburger.on('click', function () {
+        if ( $(this).hasClass('hamburger_active') ) {
+            hamburgerClose();
+        } else {
+            hamburgerOpen();
+        }
+    });
+
+    $('.menu_wrapper').on('click', function() {
+        hamburgerClose();
+    });
+
+
+})(jQuery);
+(function($) {
+    var Accordion = function(el, multiple) {
+        this.el = el || {};
+        this.multiple = multiple || false;
+
+        // Variable
+        var links = this.el.find('.accordion__btn');
+        // Event
+        links.on('click', {
+            el: this.el,
+            multiple: this.multiple
+        }, this.dropdown)
+    };
+
+    Accordion.prototype.dropdown = function(e) {
+        var $el = e.data.el;
+        $this = $(this);
+        $next = $this.next();
+
+        $next.slideToggle(150);
+        $this.parent().toggleClass('accordion__item_open');
+
+    };
+
+    var accordion = new Accordion($('.accordion'), false);
+
+})(jQuery);
+(function($) {
+    var hamburger = $('.burger-mobile');
     var body = $('body');
 
     function hamburgerOpen() {
@@ -230,11 +216,81 @@ $(document).ready(function() {
 
 
 })(jQuery);
+$(document).ready(function() {
+    $(".fancybox").fancybox();
+});
+
+// Fires whenever a player has finished loading
+function onPlayerReady(event) {
+    event.target.playVideo();
+}
+
+// Fires when the player's state changes.
+function onPlayerStateChange(event) {
+    // Go to the next video after the current one is finished playing
+    if (event.data === 0) {
+        $.fancybox.next();
+    }
+}
+
+
+// The API will call this function when the page has finished downloading the JavaScript for the player API
+function onYouTubePlayerAPIReady() {
+
+    // Initialise the fancyBox after the DOM is loaded
+    $(document).ready(function() {
+        $(".fancybox-video")
+            .attr('rel', 'gallery')
+            .fancybox({
+                openEffect  : 'none',
+                closeEffect : 'none',
+                nextEffect  : 'none',
+                prevEffect  : 'none',
+                padding     : 0,
+                margin      : 50,
+                beforeShow  : function() {
+                    // Find the iframe ID
+                    var id = $.fancybox.inner.find('iframe').attr('id');
+
+                    // Create video player object and add event listeners
+                    var player = new YT.Player(id, {
+                        events: {
+                            'onReady': onPlayerReady,
+                            'onStateChange': onPlayerStateChange
+                        }
+                    });
+                }
+            });
+    });
+
+}
 (function($) {
-    $('.submenu_search').on('click', function () {
-        $('.search_container').addClass('showed');
+    $('.btn_show').on('click', function () {
+        $('.hidden_content').toggleClass('hidden');
+        $('.btn_show').addClass('hidden');
     });
-    $('.close').on('click', function () {
-        $('.search_container').removeClass('showed');
+})(jQuery);
+
+(function($) {
+    const handleClick = event => {
+        const $target = $(event.target).next();
+        $target.toggleClass("hidden");
+        $(".more_menu").each(function() {
+            if ($(this)[0] !== $target[0]) {
+                $(this).addClass("hidden")
+            }
+        })
+    };
+
+    $(".more_btn").on("click", handleClick);
+})(jQuery);
+(function($) {
+
+    $('.sticky').hcSticky({
+        top: 120,
+        bottomEnd: 40,
+        className: 'is-sticky',
+        wrapperClassName: 'wrapper-sticky'
     });
+
 })(jQuery);

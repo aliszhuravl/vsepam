@@ -2,8 +2,11 @@
 //= parts/_ie.js
 //= parts/_link-highlighting.js
 //= parts/_scrolling.js
-//= parts/_accordion.js
 //= parts/_dd.js
-//= parts/_slick.js
+//= parts/_tabs.js
+//= parts/_menu-ds.js
+//= parts/_accordion.js
 //= parts/_hamburger.js
-//= parts/_submenu.js
+//= parts/_fancybox.js
+//= parts/_things.js
+//= parts/_sticky.js

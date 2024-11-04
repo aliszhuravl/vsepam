@@ -1,7 +1,6 @@
 .layout-inner {
   width: 100%;
   max-width: 1240px;
-  min-width: 1240px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -12,6 +11,21 @@
 }
 
 
+@media (min-width: 1200px) {
+
+  .layout-inner {
+    max-width: 1240px;
+    width: 100%;
+    min-width: 1240px;
+  }
+
+  .layout-padding {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
 @media (min-width: 641px) and (max-width: 1199px) {
 
   /**
@@ -19,9 +33,8 @@
     */
 
   .layout-inner {
-    min-width: 100%;
     width: 100%;
-    max-width: 100%;
+    min-width: 100%;
   }
 
   .layout-padding {
@@ -44,7 +57,7 @@
   }
 
   .layout-padding {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
