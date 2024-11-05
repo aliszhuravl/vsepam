@@ -1,0 +1,31 @@
+.banner_main {
+  width: 100%;
+  background-color: #E8E8E8;
+  background-image: url('../img/bf.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  padding: 4px 20px;
+    .banner__inner {
+      padding-left: 200px;
+      @extend .layout-inner;
+      min-width: 1000px;
+      max-width: 1000px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+        .cont {
+          display: block;
+
+          a {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+              span {
+                margin-right: 4px;
+              }
+          }
+        }
+    }
+}

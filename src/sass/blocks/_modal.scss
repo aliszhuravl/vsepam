@@ -32,6 +32,7 @@
     justify-content: flex-start;
     align-items: flex-start;
       p {
+        max-width: 320px;
         font-size: 16px;
         line-height: 24px;
         font-family: $font-family;
@@ -39,10 +40,10 @@
         margin-bottom: 20px;
       }
       .text_bold {
-        margin-bottom: 20px;
+        margin-bottom: 12px;
         opacity: 1;
-        font-size: 20px;
-        font-family: $font-family_medium;
+        font-size: 24px;
+        font-family: $font-family-semibold;
       }
     .buttons_block {
       display: flex;
@@ -128,6 +129,15 @@
   .popup {
     width: 90%;
     max-width: 90%;
+
+    .popup_inner p {
+      font-size: 13px;
+      line-height: 16px;
+    }
+
+    .popup_inner .text_bold {
+      font-size: 18px;
+    }
 
       .popup_inner .buttons_block {
         width: 100%;

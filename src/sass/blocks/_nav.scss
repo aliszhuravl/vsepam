@@ -20,8 +20,12 @@
 }
 
 .nav__link {
-  @extend .link;
-  padding: 15px;
+  padding: 0 10px;
   text-decoration: none;
-  font-family: $font-family_bold;
+  font-family: $font-family;
+  color: $color-white;
+    &:hover {
+      opacity: 0.5;
+      color: $color-white;
+    }
 }

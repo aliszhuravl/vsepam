@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Все памятники</title>
+</head>
+<body>
+<div class="page-container page-main">
+    <header class="header">
+            <div class="header_top">
+                <div class="header__inner">
+                    <div class="left">
+                        <div class="left_textbox">
+                            <p>Работаем по всей России</p>
+                            <p>Пн-Вс 10:00 — 19:00</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="right_textbox">
+                            <a href="mailto:zakaz@vsepamyatniki.ru" class="link link_white">zakaz@vsepamyatniki.ru</a>
+                            <p>Петрозаводск, Березовая ал. 24</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header_bottom">
+                <div class="header__inner">
+                    <div class="logo">
+                        <a class="logo_link" href="index.html">
+                        <img class="logo_pic" src="img/logo_0.svg" alt="">
+                        <img src="img/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="menu">
+                        <ul class="nav__list">
+                            <li><a href="#" class="nav__link">Оплата и доставка</a></li>
+                            <li><a href="gallery.html" class="nav__link">Фото работ</a></li>
+                            <li><a href="#" class="nav__link">Установка</a></li>
+                            <li><a href="sale.html" class="nav__link link_green">Скидки %</a></li>
+                            <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="btns">
+                        <a href="#modal_0" rel="modal:open" class="btn btn_gray">Есть вопрос?</a>
+                        <input type="search" class="form__item search__item" placeholder="Поиск">
+                    </div>
+                    <div class="panel">
+                        <div class="panel_item">
+                            <a href="raiting.html">
+                                <span class="icon-rait"></span>
+                                <span class="quantity">4</span>
+                            </a>
+                        </div>
+                        <div class="panel_item">
+                            <a href="liked.html">
+                                <span class="icon-raiting"></span>
+                                <span class="quantity">4</span>
+                            </a>
+                        </div>
+                        <div class="panel_item">
+                            <a href="liked.html">
+                                <span class="icon-crt"></span>
+                                <span class="quantity">4</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="burger mobile" id="burger">
+                        <button class="hamburger">
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <div class="banner_main desktop">
+        <div class="banner__inner">
+            <div class="action">
+                <img src="img/sale.svg" alt="">
+            </div>
+            <button class="btn">Открыть</button>
+            <div class="cont">
+                <a href="tel:88007006074" class="link"><span class="icon-tel"></span>8-800-700-60-74</a>
+                <a href="#" class="link"><span class="icon-wa"></span>8-906-208-51-67</a>
+            </div>
+        </div>
+    </div>
+    <main class="page">
+        <div class="page__inner">
+            <section class="page__item">
+                <div class="sidebar">
+                    <h2>Каталог памятников</h2>
+                    <div class="sidebar_catalog">
+                        <div class="sidebar_catalog__accordion">
+                            <div class="accordion">
+                                <ul class="accordion__list">
+                                    <li class="accordion__item">
+                                        <div class="accordion__btn">
+                                            <p class="accordion__text"><img src="img/simple.svg" alt="">Стандартные</p>
+                                        </div>
+                                        <div class="accordion__content">
+                                            <ul class="list">
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="accordion__item">
+                                        <div class="accordion__btn">
+                                            <p class="accordion__text"><img src="img/simple.svg" alt="">Фигурные памятники</p>
+                                        </div>
+                                        <div class="accordion__content">
+                                            <ul class="list">
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="accordion__item">
+                                        <div class="accordion__btn">
+                                            <p class="accordion__text"><img src="img/st.svg" alt="">Недорогие, Элитные</p>
+                                        </div>
+                                        <div class="accordion__content">
+                                            <ul class="list">
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="accordion__item">
+                                        <div class="accordion__btn">
+                                            <p class="accordion__text"><img src="img/face.svg" alt="">Стандартные</p>
+                                        </div>
+                                        <div class="accordion__content">
+                                            <ul class="list">
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="accordion__item">
+                                        <div class="accordion__btn">
+                                            <p class="accordion__text"><img src="img/hands.svg" alt="">Стандартные</p>
+                                        </div>
+                                        <div class="accordion__content">
+                                            <ul class="list">
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="accordion__item">
+                                        <div class="accordion__btn">
+                                            <p class="accordion__text"><img src="img/big.svg" alt="">Фигурные памятники</p>
+                                        </div>
+                                        <div class="accordion__content">
+                                            <ul class="list">
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="accordion__item">
+                                        <div class="accordion__btn">
+                                            <p class="accordion__text"><img src="img/br.svg" alt="">Недорогие, Элитные</p>
+                                        </div>
+                                        <div class="accordion__content">
+                                            <ul class="list">
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="accordion__item">
+                                        <div class="accordion__btn">
+                                            <p class="accordion__text"><img src="img/simple.svg" alt="">Стандартные</p>
+                                        </div>
+                                        <div class="accordion__content">
+                                            <ul class="list">
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="accordion__item">
+                                        <div class="accordion__btn">
+                                            <p class="accordion__text"><img src="img/br.svg" alt="">Недорогие, Элитные</p>
+                                        </div>
+                                        <div class="accordion__content">
+                                            <ul class="list">
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="accordion__item">
+                                        <div class="accordion__btn">
+                                            <p class="accordion__text"><img src="img/big.svg" alt="">Фигурные памятники</p>
+                                        </div>
+                                        <div class="accordion__content">
+                                            <ul class="list">
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="accordion__item">
+                                        <div class="accordion__btn">
+                                            <p class="accordion__text"><img src="img/br.svg" alt="">Недорогие, Элитные</p>
+                                        </div>
+                                        <div class="accordion__content">
+                                            <ul class="list">
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner">
+                        <img src="img/banner.png" alt="">
+                    </div>
+                    <div class="articles">
+                        <h2>Статьи</h2>
+                        <div  class="articles_box">
+                            <a  href="#" class="articles_box__item">
+                                <div class="art_img"><img src="img/article.jpg" alt=""></div>
+                                <p>Виды памятников на могилу по форме</p>
+                                <p class="date">27.01.2024</p>
+                            </a>
+                            <a  href="#" class="articles_box__item">
+                                <div class="art_img"><img src="img/article.jpg" alt=""></div>
+                                <p>Виды памятников на могилу по форме</p>
+                                <p class="date">27.01.2024</p>
+                            </a>
+                            <a  href="#" class="articles_box__item">
+                                <div class="art_img"><img src="img/article.jpg" alt=""></div>
+                                <p>Виды памятников на могилу по форме</p>
+                                <p class="date">27.01.2024</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_content">
+
+                </div>
+
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__inner_col">
+                <p class="col_name">Памятники</p>
+                <ul class="list">
+                    <li><a href="#" class="link link_white">Стандартные</a></li>
+                    <li><a href="#" class="link link_white">Фигурные памятники</a></li>
+                    <li><a href="#" class="link link_white">Недорогие, Элитные</a></li>
+                    <li><a href="#" class="link link_white">Стандартные</a></li>
+                    <li><a href="#" class="link link_white">Фигурные памятники</a></li>
+                    <li><a href="#" class="link link_white">Христианские</a></li>
+                    <li><a href="#" class="link link_white">Фигурные</a></li>
+                    <li><a href="#" class="link link_white">Стандартные</a></li>
+                </ul>
+            </div>
+            <div class="footer__inner_col">
+                <p class="col_name">Аксессуары</p>
+                <ul class="list">
+                    <li><a href="#" class="link link_white">Стандартные</a></li>
+                    <li><a href="#" class="link link_white">Фигурные памятники</a></li>
+                    <li><a href="#" class="link link_white">Недорогие, Элитные</a></li>
+                    <li><a href="#" class="link link_white">Стандартные</a></li>
+                    <li><a href="#" class="link link_white">Фигурные памятники</a></li>
+                    <li><a href="#" class="link link_white">Христианские</a></li>
+                    <li><a href="#" class="link link_white">Фигурные</a></li>
+                    <li><a href="#" class="link link_white">Стандартные</a></li>
+                </ul>
+            </div>
+            <div class="footer__inner_col">
+                <p class="col_name">Информация</p>
+                <ul class="list">
+                    <li><a href="#" class="link link_white">Стандартные</a></li>
+                    <li><a href="#" class="link link_white">Фигурные памятники</a></li>
+                    <li><a href="#" class="link link_white">Недорогие, Элитные</a></li>
+                    <li><a href="#" class="link link_white">Стандартные</a></li>
+                    <li><a href="#" class="link link_white">Фигурные памятники</a></li>
+                    <li><a href="#" class="link link_white">Христианские</a></li>
+                    <li><a href="#" class="link link_white">Фигурные</a></li>
+                    <li><a href="#" class="link link_white">Стандартные</a></li>
+                </ul>
+            </div>
+            <div class="footer__inner_col">
+                <p class="col_name">Мы в соц.сетях</p>
+                <div class="social">
+                    <a href="#"><img src="img/vk.svg" alt=""></a>
+                    <a href="#"><img src="img/zen.svg" alt=""></a>
+                    <a href="#"><img src="img/youtube.svg" alt=""></a>
+                    <a href="#"><img src="img/insta.svg" alt=""></a>
+                </div>
+                <div class="ya-rait">
+                    <img src="img/ya.png" alt="">
+                </div>
+                <div class="address">
+                    <p>г.Петрозаводск Березовая ал.24</p>
+                </div>
+            </div>
+            <div class="footer_mobile mobile">
+                <div class="accordion">
+                    <ul class="accordion__list">
+                        <li class="accordion__item">
+                            <div class="accordion__btn">
+                                <p class="accordion__text">Памятники</p>
+                            </div>
+                            <div class="accordion__content">
+                                <ul class="list">
+                                    <li><a href="#" class="link link_black">Стандартные</a></li>
+                                    <li><a href="#" class="link link_black">Габбро-Диабаз и Дымовский</a></li>
+                                    <li><a href="#" class="link link_black">Двойные</a></li>
+                                    <li><a href="#" class="link link_black">Стандартные</a></li>
+                                    <li><a href="#" class="link link_black">Габбро-Диабаз и Дымовский</a></li>
+                                    <li><a href="#" class="link link_black">Двойные</a></li>
+                                    <li><a href="#" class="link link_black">Стандартные</a></li>
+                                    <li><a href="#" class="link link_black">Габбро-Диабаз и Дымовский</a></li>
+                                    <li><a href="#" class="link link_black">Двойные</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="accordion__item">
+                            <div class="accordion__btn">
+                                <p class="accordion__text">Аксессуары</p>
+                            </div>
+                            <div class="accordion__content">
+                                <ul class="list">
+                                    <li><a href="#" class="link link_black">Стандартные</a></li>
+                                    <li><a href="#" class="link link_black">Стандартные</a></li>
+                                    <li><a href="#" class="link link_black">Стандартные</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="accordion__item">
+                            <div class="accordion__btn">
+                                <p class="accordion__text">Информация</p>
+                            </div>
+                            <div class="accordion__content">
+                                <ul class="list">
+                                    <li><a href="#" class="link link_black">Стандартные</a></li>
+                                    <li><a href="#" class="link link_black">Стандартные</a></li>
+                                    <li><a href="#" class="link link_black">Стандартные</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="accordion__item">
+                            <div class="accordion__btn">
+                                <p class="accordion__text">Контакты</p>
+                            </div>
+                            <div class="accordion__content contacts">
+                                <div class="contacts_inner">
+                                    <div class="social">
+                                        <a href="#"><img src="img/vk.svg" alt=""></a>
+                                        <a href="#"><img src="img/zen.svg" alt=""></a>
+                                        <a href="#"><img src="img/youtube.svg" alt=""></a>
+                                        <a href="#"><img src="img/insta.svg" alt=""></a>
+                                    </div>
+                                    <div class="ya-rait">
+                                        <img src="img/ya.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="address">
+                                    <p>г.Петрозаводск Березовая ал.24</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="footer__inner">
+                <p>2014 — 2024 © Vsepamyatniki</p>
+            </div>
+        </div>
+    </footer>
+    <div class="menu_wrapper menu_opener">
+        <div class="menu_mobile">
+            <div class="menu_mobile__inner">
+                <div class="menu_body">
+                    <div class="menu_body__inner">
+                        <div class="menu_body__inner_top">
+                            <a href="#modal_0" rel="modal:open" class="btn btn_gray">Есть вопрос?</a>
+                            <input type="search" class="form__item search__item" placeholder="Поиск">
+                        </div>
+                        <div class="promos">
+                            <a href="#" class="block_title__info_item">
+                                <span class="icon-box"></span>
+                                <p>Оплата и доставка</p>
+                            </a>
+                            <a href="#" class="block_title__info_item">
+                                <span class="icon-garant"></span>
+                                <p>Гарантия</p>
+                            </a>
+                            <a href="#" class="block_title__info_item">
+                                <span class="icon-cont"></span>
+                                <p>Контакты</p>
+                            </a>
+                            <a href="feedback.html" class="block_title__info_item feedbck">
+                                <p>Отзывы</p>
+                                <p>169</p>
+                                <div class="raiting">
+                                    <span class="icon-raiting"></span>
+                                    <span class="icon-raiting"></span>
+                                    <span class="icon-raiting"></span>
+                                    <span class="icon-raiting"></span>
+                                    <span class="icon-raiting"></span>
+                                </div>
+                            </a>
+                        </div>
+                        <h2>Каталог памятников</h2>
+                        <div class="sidebar_catalog__accordion">
+                            <div class="accordion">
+                                <ul class="accordion__list">
+                                    <li class="accordion__item">
+                                        <div class="accordion__btn">
+                                            <p class="accordion__text"><span class="icon-simple"></span>Стандартные</p>
+                                        </div>
+                                        <div class="accordion__content">
+                                            <ul class="list">
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="accordion__item">
+                                        <div class="accordion__btn">
+                                            <p class="accordion__text"><span class="icon-simple"></span>Фигурные памятники</p>
+                                        </div>
+                                        <div class="accordion__content">
+                                            <ul class="list">
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="accordion__item">
+                                        <div class="accordion__btn">
+                                            <p class="accordion__text"><span class="icon-simple"></span>Недорогие, Элитные</p>
+                                        </div>
+                                        <div class="accordion__content">
+                                            <ul class="list">
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="accordion__item">
+                                        <div class="accordion__btn">
+                                            <p class="accordion__text"><span class="icon-simple"></span>Стандартные</p>
+                                        </div>
+                                        <div class="accordion__content">
+                                            <ul class="list">
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="accordion__item">
+                                        <div class="accordion__btn">
+                                            <p class="accordion__text"><span class="icon-simple"></span>Стандартные</p>
+                                        </div>
+                                        <div class="accordion__content">
+                                            <ul class="list">
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="accordion__item accordion__item_open">
+                                        <div class="accordion__btn">
+                                            <p class="accordion__text"><span class="icon-simple"></span>Фигурные памятники</p>
+                                        </div>
+                                        <div class="accordion__content">
+                                            <ul class="list">
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="accordion__item">
+                                        <div class="accordion__btn">
+                                            <p class="accordion__text"><span class="icon-simple"></span>Недорогие, Элитные</p>
+                                        </div>
+                                        <div class="accordion__content">
+                                            <ul class="list">
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="accordion__item">
+                                        <div class="accordion__btn">
+                                            <p class="accordion__text"><span class="icon-simple"></span>Стандартные</p>
+                                        </div>
+                                        <div class="accordion__content">
+                                            <ul class="list">
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="accordion__item">
+                                        <div class="accordion__btn">
+                                            <p class="accordion__text"><span class="icon-simple"></span>Недорогие, Элитные</p>
+                                        </div>
+                                        <div class="accordion__content">
+                                            <ul class="list">
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="accordion__item">
+                                        <div class="accordion__btn">
+                                            <p class="accordion__text"><span class="icon-simple"></span>Фигурные памятники</p>
+                                        </div>
+                                        <div class="accordion__content">
+                                            <ul class="list">
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="accordion__item">
+                                        <div class="accordion__btn">
+                                            <p class="accordion__text"><span class="icon-simple"></span>Недорогие, Элитные</p>
+                                        </div>
+                                        <div class="accordion__content">
+                                            <ul class="list">
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                                <li><a href="#" class="link link_black">Стандартные</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="submenu">
+        <div class="submenu__inner">
+            <div class="submenu__inner_item submenu_search">
+                <span class="icon-src"></span>
+                <p>Поиск</p>
+            </div>
+            <a class="submenu__inner_item" href="#">
+                <span class="icon-ph"></span>
+                <p>Консультация</p>
+            </a>
+            <a class="submenu__inner_item" href="contacts.html">
+                <span class="icon-cont"></span>
+                <p>Контакты</p>
+            </a>
+            <a class="submenu__inner_item" href="#">
+                <span class="icon-i"></span>
+                <p>FAQ</p>
+            </a>
+            <a class="submenu__inner_item submenu_cart" href="cart.html">
+                <span class="icon-crt"></span>
+                <span class="quantity">4</span>
+                <p>Корзина</p>
+            </a>
+        </div>
+        <div class="search_container">
+            <input type="search" class="form__item search__item" placeholder="Поиск">
+            <button class="close"><img src="img/close.svg" alt="#"></button>
+        </div>
+    </div>
+    <div class="popup_wrapper">
+        <div class="popup" id="modal_0">
+            <div class="close-modal"><div class="round_link"><img src="img/cross.svg" alt="x"></div></div>
+            <div class="popup_inner">
+                <p class="text_bold">Заказать консультацию</p>
+                <p>Введите ваши данные, и наш менеджер перезвонит вам в течение 5 минут</p>
+                <div class="pop_form">
+                    <div class="form_box">
+                        <input type="tel" class="form__item" placeholder="Ваше имя">
+                    </div>
+                    <div class="form_box">
+                        <input type="tel" class="form__item" placeholder="Ваш телефон">
+                    </div>
+                </div>
+                <div class="buttons_block">
+                    <button class="btn">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery/jquery-3.1.1.min.js"><\/script>')</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="js/libs/jquery.fancybox/jquery.fancybox.min.js"></script>
+<script src="js/libs/jquery.slick/slick.min.js"></script>
+<script src="js/libs/jquery.modal/jquery.modal.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

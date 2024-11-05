@@ -80,6 +80,34 @@ window.onload = function() {
     smoothScroll( '#link-to-block' );
 
 })(jQuery);
+(function($) {
+    var Accordion = function(el, multiple) {
+        this.el = el || {};
+        this.multiple = multiple || false;
+
+        // Variable
+        var links = this.el.find('.accordion__btn');
+        // Event
+        links.on('click', {
+            el: this.el,
+            multiple: this.multiple
+        }, this.dropdown)
+    };
+
+    Accordion.prototype.dropdown = function(e) {
+        var $el = e.data.el;
+        $this = $(this);
+        $next = $this.next();
+
+        $next.slideToggle(150);
+        $this.parent().toggleClass('accordion__item_open');
+
+    };
+
+    var accordion = new Accordion($('.accordion'), false);
+
+})(jQuery);
+
 $('.dropdown').each(function () {
 
     // Cache the number of options
@@ -108,13 +136,9 @@ $('.dropdown').each(function () {
     // Updates the select element to have the value of the equivalent option
     $dropdownListItems.click(function(e) {
         e.stopPropagation();
-        $dropdownText.text($(this).text());
+        $dropdownText.html($(this).html());
         $dropdown.removeClass('dropdown_opened');
         $dropdownList.slideUp(150);
-        if($(this).hasClass('tabs__btn')){
-            $(this).addClass('tabs__btn_active').siblings().removeClass('tabs__btn_active');
-            $(this).closest('.tabs').find('.tabs__item').removeClass('active').eq($(this).index()).addClass('active');
-        }
     });
 
     // Hides the unordered list when clicking outside of it
@@ -123,73 +147,64 @@ $('.dropdown').each(function () {
         $dropdownList.slideUp(150);
     });
 });
-(function($) {
+$(document).ready(function() {
 
-    $('.tabs').each( function() {
-
-        $('.tabs__buttons').on('click', '.tabs__btn:not(.tabs__btn_active)', function () {
-            $(this).addClass('tabs__btn_active').siblings().removeClass('tabs__btn_active');
-            $(this).closest('.tabs').find('.tabs__item').removeClass('active').eq($(this).index()).addClass('active');
-        });
-    });
-})(jQuery);
-(function($) {
-    var hamburger = $('.burger-desktop');
-    var body = $('body');
-
-    function hamburgerOpen() {
-        hamburger.addClass('hamburger_active');
-        $('.menu_desktop').addClass('menu_desktop_opened');
-    }
-
-    function hamburgerClose() {
-        hamburger.removeClass('hamburger_active');
-        $('.menu_desktop').removeClass('menu_desktop_opened');
-    }
-
-    hamburger.on('click', function () {
-        if ( $(this).hasClass('hamburger_active') ) {
-            hamburgerClose();
-        } else {
-            hamburgerOpen();
-        }
+    $('.slider_main').slick({
+        dots: true,
+        infinite: true,
+        cssEase:'linear',
+        slidesToShow: 1,
+        arrows: false
     });
 
-    $('.menu_wrapper').on('click', function() {
-        hamburgerClose();
+    $('.gallery_slider').slick({
+        dots: false,
+        infinite: true,
+        cssEase:'linear',
+        slidesToShow: 2,
+        arrows: false,
+        centerMode: true,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
-
-})(jQuery);
+    $('.slider_catalog').slick({
+        dots: false,
+        infinite: true,
+        cssEase:'linear',
+        slidesToShow: 3,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 2,
+                    centerMode: false
+                }
+            }
+        ]
+    });
+});
 (function($) {
-    var Accordion = function(el, multiple) {
-        this.el = el || {};
-        this.multiple = multiple || false;
-
-        // Variable
-        var links = this.el.find('.accordion__btn');
-        // Event
-        links.on('click', {
-            el: this.el,
-            multiple: this.multiple
-        }, this.dropdown)
-    };
-
-    Accordion.prototype.dropdown = function(e) {
-        var $el = e.data.el;
-        $this = $(this);
-        $next = $this.next();
-
-        $next.slideToggle(150);
-        $this.parent().toggleClass('accordion__item_open');
-
-    };
-
-    var accordion = new Accordion($('.accordion'), false);
-
-})(jQuery);
-(function($) {
-    var hamburger = $('.burger-mobile');
+    var hamburger = $('.burger');
     var body = $('body');
 
     function hamburgerOpen() {
@@ -216,6 +231,25 @@ $('.dropdown').each(function () {
 
 
 })(jQuery);
+(function($) {
+    $('.submenu_search').on('click', function () {
+        $('.search_container').addClass('showed');
+    });
+    $('.close').on('click', function () {
+        $('.search_container').removeClass('showed');
+    });
+})(jQuery);
+(function($) {
+
+    //$('.tabs').each( function() {
+
+    $('.tabs__buttons').on('click', '.tabs__btn:not(.tabs__btn_active)', function () {
+        $(this).addClass('tabs__btn_active').siblings().removeClass('tabs__btn_active');
+        $(this).closest('.tabs').find('.tabs__item').removeClass('active').eq($(this).index()).addClass('active');
+    });
+    //  });
+})(jQuery);
+
 $(document).ready(function() {
     $(".fancybox").fancybox();
 });
@@ -264,33 +298,3 @@ function onYouTubePlayerAPIReady() {
     });
 
 }
-(function($) {
-    $('.btn_show').on('click', function () {
-        $('.hidden_content').toggleClass('hidden');
-        $('.btn_show').addClass('hidden');
-    });
-})(jQuery);
-
-(function($) {
-    const handleClick = event => {
-        const $target = $(event.target).next();
-        $target.toggleClass("hidden");
-        $(".more_menu").each(function() {
-            if ($(this)[0] !== $target[0]) {
-                $(this).addClass("hidden")
-            }
-        })
-    };
-
-    $(".more_btn").on("click", handleClick);
-})(jQuery);
-(function($) {
-
-    $('.sticky').hcSticky({
-        top: 120,
-        bottomEnd: 40,
-        className: 'is-sticky',
-        wrapperClassName: 'wrapper-sticky'
-    });
-
-})(jQuery);

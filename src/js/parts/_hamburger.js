@@ -1,5 +1,5 @@
 (function($) {
-    var hamburger = $('.burger-mobile');
+    var hamburger = $('.burger');
     var body = $('body');
 
     function hamburgerOpen() {

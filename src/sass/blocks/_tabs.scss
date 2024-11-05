@@ -1,14 +1,83 @@
+
+.item_main .left {
+  width: 50%;
+  display: flex;
+  margin-right: 32px;
+}
+
 .tabs__item {
   display: none;
 
   &.active {
     display: block;
+    color: $color-black;
+    text-align: center;
   }
 }
 
-.tabs-cards {
-  .form_descr {
-    margin-bottom: 6px;
-    font-size: 12px;
+.tabs {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.tabs__buttons {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  margin-right: 12px;
+  li {
+    margin-bottom: 12px;
+    max-width: 120px;
+    max-height: 120px;
+    border-radius: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    img {
+      width: 100%;
+      object-fit: contain;
+      display: block;
+    }
   }
+}
+
+.tabs__btn {
+  border: 1px solid $color_border;
+  margin: 0;
+  transition: all 0.2s;
+  cursor: pointer;
+  padding: 12px;
+  &:hover {
+    border: 1px solid $color-green;
+  }
+}
+
+.tabs__btn_active {
+  transition: all 0.2s;
+  border: 1px solid $color-green;
+}
+
+.tabs__content {
+  border: 1px solid $color_border;
+  width: 100%;
+  border-radius: 10px;
+  padding: 20px;
+  img {
+    display: block;
+    object-fit: contain;
+    width: 100%;
+  }
+}
+
+.tabs__content img {
+  display: block;
+  max-width: 300px;
+  width: auto;
+  margin: 0 auto;
 }

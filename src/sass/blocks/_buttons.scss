@@ -1,28 +1,25 @@
 .btn {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   vertical-align: top;
-  height: 48px;
-  padding: 5px 20px;
-  border-radius: 12px;
+  height: 36px;
+  padding: 5px 12px;
+  border-radius: 7px;
   border-width: 1px;
   border-style: solid;
-  border-color: $color-blue;
-  background-color: $color-blue;
-  min-width: 100px;
+  border-color: $color-green;
+  background-color: $color-green;
   color: #fff;
   font-family: $font-family;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   white-space: nowrap;
   text-decoration: none;
   cursor: pointer;
   outline: 0;
-  box-shadow: none;
-  transition: all 0.2s;
+  box-shadow: none;  
 
+  transition: all 0.2s;
   &:hover,
   &:active,
   &:focus {
@@ -33,31 +30,59 @@
   
   &:hover,
   &:focus {
-    background-color: darken($color-blue, 10%);
-    border-color: darken($color-blue, 10%);
+    opacity: 0.8;
+    transition: all 0.2s;
   }
   
   &:active {
-    background-color: darken($color-blue, 10%);
-    border-color: darken($color-blue, 10%);
+    background-color: darken($color-gray-10, 5%);
   }
 }
 
 .btn_simple {
-  background-color: transparent;
-  color: $color-blue;
-  transition: all 0.2s;
-    &:hover {
+  background-color: #fff;
+  border-color: #DFDFDF;
+  color: #696969;
+  &:hover,
+  &:focus {
+    border-color: $color-gray-40;
+    background-color: $color-gray-10;
+    transition: all 0.2s;
+  }
+}
+
+.btn_simple_green {
+  background-color: #fff;
+  border-color: $color-green;
+  color: $color-green;
+    &:hover,
+    &:focus {
+      opacity: 0.6;
       transition: all 0.2s;
-      background-color: $color-blue;
-      color: #fff;
     }
 }
 
-.btn_img {
-  img {
-    margin-left: 12px;
-    display: block;
+.btn_go {
+  background-image: url('../img/go.svg');
+  padding-right: 24px;
+  background-repeat: no-repeat;
+  background-position: 94% center;
+}
+
+.btn_gray {
+  background-color: #444444;
+  color: $color-white;
+  border-color: #444444;
+  border-radius: 7px;
+  height: 42px;
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+    text-decoration: none;
+    background-color: $color-green;
+    transition: all 0.2s;
+    border-color: $color-green;
   }
 }
 
