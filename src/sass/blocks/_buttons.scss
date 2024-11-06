@@ -39,6 +39,16 @@
   }
 }
 
+.btn_red {
+  border-color: #D56262;
+  background-color: transparent;
+  color: #D56262;
+    &:hover {
+      background-color: #D56262;
+      color: #fff;
+    }
+}
+
 .btn_simple {
   background-color: #fff;
   border-color: #DFDFDF;

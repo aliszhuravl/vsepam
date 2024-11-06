@@ -81,3 +81,36 @@
   width: auto;
   margin: 0 auto;
 }
+
+.feedback_tabs {
+  flex-direction: column;
+    .tabs__buttons {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: flex-start;
+        .tabs__btn {
+          display: flex;
+          align-items: center;
+          white-space: nowrap;
+          padding: 6px 12px;
+          width: 154px;
+          justify-content: space-between;
+          max-width: unset;
+          background-color: #F6F6F6;
+          border-color: #F6F6F6;
+          margin-right: 12px;
+            .raiting {
+              margin-right: 6px;
+            }
+          &:last-child {
+            margin-bottom: 12px;
+            margin-right: 0;
+          }
+        }
+        .tabs__btn_active {
+          border-color: $color-green;
+          background-color: #fff;
+        }
+    }
+}

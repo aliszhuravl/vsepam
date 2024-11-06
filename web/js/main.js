@@ -157,6 +157,17 @@ $(document).ready(function() {
         arrows: false
     });
 
+    $('.fb_slider').slick({
+        dots: false,
+        infinite: true,
+        cssEase:'linear',
+        slidesToShow: 3,
+        // adaptiveHeight: true,
+        variableWidth: true,
+        centerMode: true,
+        arrows: false
+    });
+
     $('.gallery_slider').slick({
         dots: false,
         infinite: true,
