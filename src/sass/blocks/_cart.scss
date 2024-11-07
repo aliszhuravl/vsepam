@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 20px;
   .left {
     p {
       margin-bottom: 6px;
@@ -105,6 +106,7 @@
         margin-bottom: 12px;
       }
       .left {
+        width: 100%;
         .btn {
           margin-bottom: 8px;
           width: 100%;

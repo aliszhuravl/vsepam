@@ -2069,13 +2069,13 @@ h3 {
 }
 
 .cart_acc .accordion__btn {
-	padding: 16px 36px 16px 16px;
+	padding: 20px 40px 20px 20px;
 	border-radius: 7px;
 	background-color: #f6f6f6;
 }
 
 .cart_acc .accordion__btn:before {
-	right: 16px;
+	right: 20px;
 }
 
 .cart_acc .accordion__btn .cart_element {
@@ -2118,7 +2118,11 @@ h3 {
 }
 
 .cart_acc .accordion__item_open .accordion__content {
-	padding: 16px;
+	padding: 0 20px 20px 20px;
+}
+
+.cart_acc .accordion__item_open .accordion__content .parameter_p .qtt {
+	background-color: #fff;
 }
 
 .cart_acc .accordion__item_open .accordion__content .btns {
@@ -4295,6 +4299,7 @@ h3 {
 
 .summary {
 	display: flex;
+	margin-bottom: 20px;
 	align-items: center;
 	justify-content: space-between;
 }
@@ -5283,6 +5288,10 @@ h2 {
 
 .summary .right {
 	margin-bottom: 12px;
+}
+
+.summary .left {
+	width: 100%;
 }
 
 .summary .left .btn {

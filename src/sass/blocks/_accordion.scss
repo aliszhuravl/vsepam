@@ -140,10 +140,10 @@
   }
   .accordion__btn {
     background-color: #F6F6F6;
-    padding: 16px 36px 16px 16px;
+    padding: 20px 40px 20px 20px;
     border-radius: 7px;
       &:before {
-        right: 16px;
+        right: 20px;
       }
       .cart_element {
         display: flex;
@@ -178,7 +178,10 @@
     border-radius: 10px;
     margin-bottom: 8px;
       .accordion__content {
-        padding: 16px;
+        padding: 0 20px 20px 20px;
+        .parameter_p .qtt {
+          background-color: #fff;
+        }
           .btns {
             margin-top: 12px;
           }
