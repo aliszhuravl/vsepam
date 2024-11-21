@@ -583,6 +583,16 @@ th {
 	color: #44b54f;
 }
 
+.icon-uniE927:before {
+	font-size: 12px;
+	content: '\e927';
+}
+
+.icon-uniE926:before {
+	font-size: 12px;
+	content: '\e926';
+}
+
 *,
 *:before,
 *:after {
@@ -3536,7 +3546,7 @@ h3 {
 
 .descr .right .label_box .parameter_p span {
 	font-size: 14px;
-	width: 33.333%;
+	width: auto;
 }
 
 .descr .right .label_box .parameter_p .green {
@@ -3583,7 +3593,7 @@ h3 {
 	font-size: 14px;
 	line-height: 14px;
 	display: block;
-	padding: 6px 12px;
+	padding: 0;
 }
 
 .complect {
@@ -3765,6 +3775,20 @@ h3 {
 
 .feedback .feed_slider .gallery_slider__item .date {
 	color: #b1b1b1;
+}
+
+.q_input {
+	width: -moz-min-content;
+	width: min-content;
+	max-width: 24px;
+	padding: 0;
+	text-align: center;
+	border: none;
+	background-color: transparent;
+}
+
+.q_input::-webkit-input-placeholder {
+	text-align: center;
 }
 
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
