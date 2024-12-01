@@ -427,6 +427,7 @@
       .gallery_slider__item {
         border: 1px solid $color-border;
         padding: 16px;
+        max-width: 360px;
         .raiting {
           margin-bottom: 12px;
         }
