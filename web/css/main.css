@@ -853,6 +853,16 @@ h3 {
 	overflow: hidden;
 }
 
+.slider_main {
+	transition: all .2s;
+	opacity: 0;
+}
+
+.add_slider {
+	transition: all .2s;
+	opacity: 1;
+}
+
 .page__inner {
 	display: flex;
 	flex-direction: column;
@@ -1425,6 +1435,21 @@ h3 {
 
 .slider {
 	overflow: hidden;
+}
+
+.feedback_page .block_title.main_cat_title,
+.page-item .block_title.main_cat_title,
+.page-search .block_title.main_cat_title,
+.page-cart .block_title.main_cat_title {
+	flex-direction: column-reverse;
+	align-items: flex-start;
+}
+
+.feedback_page .block_title.main_cat_title .block_title__info,
+.page-item .block_title.main_cat_title .block_title__info,
+.page-search .block_title.main_cat_title .block_title__info,
+.page-cart .block_title.main_cat_title .block_title__info {
+	margin-bottom: 12px;
 }
 
 /* Slider */
@@ -3277,6 +3302,7 @@ h3 {
 .tabs__content img {
 	display: block;
 	width: 100%;
+	max-height: 300px;
 	-o-object-fit: contain;
 	object-fit: contain;
 }
@@ -3292,38 +3318,87 @@ h3 {
 	flex-direction: column;
 }
 
-.feedback_tabs .tabs__buttons {
+.feedback_tabs .feedback__buttons {
 	display: flex;
+	overflow: auto;
 	flex-direction: row;
 	align-items: stretch;
 	justify-content: flex-start;
 }
 
-.feedback_tabs .tabs__buttons .tabs__btn {
+.feedback_tabs .feedback__buttons::-webkit-scrollbar {
+	width: 0;
+}
+
+.feedback_tabs .feedback__buttons .stars {
 	display: flex;
 	width: 154px;
 	max-width: unset;
 	margin-right: 12px;
+	margin-bottom: 20px;
 	padding: 6px 12px;
 	white-space: nowrap;
+	text-decoration: none;
+	color: #242424;
+	border: 1px solid #dfdfdf;
 	border-color: #f6f6f6;
+	border-radius: 10px;
 	background-color: #f6f6f6;
 	align-items: center;
 	justify-content: space-between;
 }
 
-.feedback_tabs .tabs__buttons .tabs__btn .raiting {
+.feedback_tabs .feedback__buttons .stars .raiting {
 	margin-right: 6px;
 }
 
-.feedback_tabs .tabs__buttons .tabs__btn:last-child {
+.feedback_tabs .feedback__buttons .stars:last-child {
 	margin-right: 0;
-	margin-bottom: 12px;
 }
 
-.feedback_tabs .tabs__buttons .tabs__btn_active {
+.feedback_tabs .feedback__buttons .active_f {
 	border-color: #52ad60;
 	background-color: #fff;
+}
+
+.stars4 span.icon-raiting:last-child:before {
+	color: #d7d7d9;
+}
+
+.stars3 span.icon-raiting:nth-child(4):before {
+	color: #d7d7d9;
+}
+
+.stars3 span.icon-raiting:last-child:before {
+	color: #d7d7d9;
+}
+
+.stars2 span.icon-raiting:nth-child(3):before {
+	color: #d7d7d9;
+}
+
+.stars2 span.icon-raiting:nth-child(4):before {
+	color: #d7d7d9;
+}
+
+.stars2 span.icon-raiting:last-child:before {
+	color: #d7d7d9;
+}
+
+.stars1 span.icon-raiting:nth-child(2):before {
+	color: #d7d7d9;
+}
+
+.stars1 span.icon-raiting:nth-child(3):before {
+	color: #d7d7d9;
+}
+
+.stars1 span.icon-raiting:nth-child(4):before {
+	color: #d7d7d9;
+}
+
+.stars1 span.icon-raiting:last-child:before {
+	color: #d7d7d9;
 }
 
 .product_main {

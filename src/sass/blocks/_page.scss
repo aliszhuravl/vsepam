@@ -19,6 +19,16 @@
   overflow: hidden;
 }
 
+.slider_main {
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.add_slider {
+  opacity: 1;
+  transition: all 0.2s;
+}
+
 .page__inner {
   @extend .layout-inner;
   display: flex;
@@ -519,6 +529,16 @@
 
 .slider {
   overflow: hidden;
+}
+
+.feedback_page, .page-item, .page-search, .page-cart {
+  .block_title.main_cat_title {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+      .block_title__info {
+        margin-bottom: 12px;
+      }
+  }
 }
 
 @media (max-width: 1199px) {

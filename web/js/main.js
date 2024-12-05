@@ -47,10 +47,15 @@ window.onload = function() {
 };
 $(function() {
 
+    setTimeout(function () {
+        $('.slider_main').addClass('add_slider');
+    }, 500);
+
     $('.slider_main').slick({
         dots: true,
         infinite: true,
         cssEase:'linear',
+        fade: true,
         slidesToShow: 1,
         arrows: false
     });

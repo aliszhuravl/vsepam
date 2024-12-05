@@ -69,9 +69,10 @@
   border-radius: 10px;
   padding: 20px;
   img {
+    max-height: 300px;
     display: block;
-    object-fit: contain;
     width: 100%;
+    object-fit: contain;
   }
 }
 
@@ -82,17 +83,28 @@
   margin: 0 auto;
 }
 
+//отзывы
+
 .feedback_tabs {
   flex-direction: column;
-    .tabs__buttons {
+    .feedback__buttons {
       display: flex;
       flex-direction: row;
       align-items: stretch;
       justify-content: flex-start;
-        .tabs__btn {
+      overflow: auto;
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+        .stars {
+          border: 1px solid $color-border;
           display: flex;
+          border-radius: 10px;
+          margin-bottom: 20px;
           align-items: center;
           white-space: nowrap;
+          text-decoration: none;
+          color: $color-black;
           padding: 6px 12px;
           width: 154px;
           justify-content: space-between;
@@ -104,13 +116,82 @@
               margin-right: 6px;
             }
           &:last-child {
-            margin-bottom: 12px;
             margin-right: 0;
           }
         }
-        .tabs__btn_active {
+        .active_f {
           border-color: $color-green;
           background-color: #fff;
         }
     }
+}
+
+.stars4 {
+  span.icon-raiting {
+    &:last-child {
+      &:before {
+        color: $color-gray-20;
+      }
+    }
+  }
+}
+
+.stars3 {
+  span.icon-raiting {
+    &:nth-child(4) {
+      &:before {
+        color: $color-gray-20;
+      }
+    }
+    &:last-child {
+      &:before {
+        color: $color-gray-20;
+      }
+    }
+  }
+}
+
+.stars2 {
+  span.icon-raiting {
+    &:nth-child(3) {
+      &:before {
+        color: $color-gray-20;
+      }
+    }
+    &:nth-child(4) {
+      &:before {
+        color: $color-gray-20;
+      }
+    }
+    &:last-child {
+      &:before {
+        color: $color-gray-20;
+      }
+    }
+  }
+}
+
+.stars1 {
+  span.icon-raiting {
+    &:nth-child(2) {
+      &:before {
+        color: $color-gray-20;
+      }
+    }
+    &:nth-child(3) {
+      &:before {
+        color: $color-gray-20;
+      }
+    }
+    &:nth-child(4) {
+      &:before {
+        color: $color-gray-20;
+      }
+    }
+    &:last-child {
+      &:before {
+        color: $color-gray-20;
+      }
+    }
+  }
 }
