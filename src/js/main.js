@@ -5,7 +5,9 @@
 //= parts/_scrolling.js
 //= parts/_accordion.js
 //= parts/_dd.js
+//= parts/_dd.js
 //= parts/_hamburger.js
 //= parts/_submenu.js
 //= parts/_tabs.js
 //= parts/_fancybox.js
+//= parts/_show.js

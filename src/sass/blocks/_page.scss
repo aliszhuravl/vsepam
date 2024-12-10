@@ -86,6 +86,16 @@
     }
 }
 
+.gallery_slider.feed_slider {
+  .slick-track {
+    display: flex;
+    align-items: stretch;
+  }
+  .gallery_slider__item {
+    max-height: unset;
+  }
+}
+
 .articles_box {
   &__item {
     text-decoration: none;

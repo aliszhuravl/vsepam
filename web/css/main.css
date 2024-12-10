@@ -615,6 +615,12 @@ th {
 	color: #44b54f;
 }
 
+.icon-trash:before {
+	font-size: 16px;
+	content: '\e92c';
+	color: #696969;
+}
+
 *,
 *:before,
 *:after {
@@ -930,6 +936,15 @@ h3 {
 	width: 100%;
 	-o-object-fit: contain;
 	object-fit: contain;
+}
+
+.gallery_slider.feed_slider .slick-track {
+	display: flex;
+	align-items: stretch;
+}
+
+.gallery_slider.feed_slider .gallery_slider__item {
+	max-height: unset;
 }
 
 .articles_box__item {
@@ -2204,6 +2219,31 @@ h3 {
 	display: none;
 }
 
+.more_points {
+	width: -moz-fit-content;
+	width: fit-content;
+	margin-top: 8px;
+	padding: 4px 12px;
+	transition: all .2s;
+	color: #fff;
+	border: none;
+	border-radius: 10px;
+	background-color: #52ad60;
+}
+
+.more_points span {
+	margin-right: 4px;
+}
+
+.more_points span:before {
+	color: #fff;
+}
+
+.more_points:hover {
+	transition: all .2s;
+	opacity: .7;
+}
+
 .form__checkbox {
 	font-size: 13px;
 	position: relative;
@@ -3271,6 +3311,7 @@ h3 {
 .tabs__buttons li img {
 	display: block;
 	width: 100%;
+	height: 100%;
 	-o-object-fit: contain;
 	object-fit: contain;
 }
@@ -3705,6 +3746,25 @@ h3 {
 
 .descr .right .label_box .form__checkbox_indicator {
 	top: 7px;
+}
+
+.hidden_point {
+	display: none !important;
+}
+
+.with-hidden {
+	position: relative;
+}
+
+.with-hidden:before {
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 30%;
+	content: '';
+	background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 60%);
 }
 
 .parameter_p .qtt {
