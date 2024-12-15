@@ -9,6 +9,13 @@
   justify-content: space-between;
     .left, .right {
       width: 50%;
+      .address_top {
+        display: flex;
+        align-items: center;
+        span {
+          margin-right: 6px;
+        }
+      }
         &_textbox {
           display: flex;
           p {
@@ -30,7 +37,7 @@
 }
 
 .header_bottom {
-  background-color: $color-black;
+  background-color: #292929;
   padding: 20px;
     .header__inner {
       display: flex;

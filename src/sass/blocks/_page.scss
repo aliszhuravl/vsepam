@@ -315,6 +315,7 @@
               align-items: center;
               justify-content: space-between;
                 .fire {
+                  position: relative;
                   background-color: #fff;
                   height: 32px;
                   width: 32px;
@@ -322,10 +323,34 @@
                   align-items: center;
                   justify-content: center;
                   border-radius: 50%;
+                    .hint {
+                      opacity: 0;
+                      visibility: hidden;
+                      position: absolute;
+                      bottom: 100%;
+                      left: 0;
+                      background-color: #fff;
+                      padding: 6px 24px;
+                      color: $color-green;
+                      font-family: $font-family_semibold;
+                      transition: all 0.2s;
+                      font-size: 12px;
+                      white-space: nowrap;
+                      border: 1px solid $color-green;
+                      border-radius: 7px;
+                      z-index: 2;
+                    }
                     img {
                       width: 20px;
                       display: block;
                       object-fit: contain;
+                    }
+                    &:hover {
+                      .hint {
+                        opacity: 1;
+                        visibility: visible;
+                        transition: all 0.2s;
+                      }
                     }
                 }
                 .add {

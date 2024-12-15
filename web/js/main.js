@@ -124,7 +124,6 @@ $(function() {
         slidesToShow: 2,
         arrows: false,
         variableWidth: true,
-        centerMode: true,
         responsive: [
             {
                 breakpoint: 1200,
