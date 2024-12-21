@@ -231,6 +231,10 @@
       .parameter {
         width: 100%;
         margin-bottom: 0;
+          .qt_outter {
+            display: flex;
+            align-items: center;
+          }
         &_p {
           display: flex;
           width: 100%;

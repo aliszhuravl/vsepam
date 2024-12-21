@@ -1360,6 +1360,7 @@ h3 {
 	display: flex;
 	width: 100%;
 	align-items: center;
+	justify-content: space-between;
 }
 
 .catalog_tile__item .item_action .btn {
@@ -2537,9 +2538,11 @@ h3 {
 .cart_acc .accordion__btn .cart_element .cart_el_name {
 	font-family: 'OpenSansBold', 'Arial', serif;
 	font-size: 16px;
+	white-space: nowrap;
 }
 
 .cart_acc .accordion__btn .cart_element .cart_img {
+	overflow: hidden;
 	width: 120px;
 	height: 120px;
 	margin-right: 20px;
@@ -2551,6 +2554,7 @@ h3 {
 .cart_acc .accordion__btn .cart_element .cart_img img {
 	display: block;
 	width: 100%;
+	height: 100%;
 	-o-object-fit: contain;
 	object-fit: contain;
 }
@@ -3799,6 +3803,11 @@ h3 {
 	margin-bottom: 0;
 }
 
+.descr .right .label_box .parameter .qt_outter {
+	display: flex;
+	align-items: center;
+}
+
 .descr .right .label_box .parameter_p {
 	display: flex;
 	width: 100%;
@@ -4643,6 +4652,14 @@ h3 {
 	color: #52ad60;
 }
 
+.cart__item_top .price_box {
+	display: flex;
+	flex-direction: column;
+	width: -webkit-fill-available;
+	margin-right: 24px;
+	align-items: flex-end;
+}
+
 .sconto {
 	display: flex;
 	width: 100%;
@@ -5377,6 +5394,10 @@ h2 {
 
 .accordion__btn:after {
 	right: 6px;
+}
+
+.cart_acc .accordion__btn .cart_element .cart_el_name {
+	white-space: unset;
 }
 
 .menu_mobile {

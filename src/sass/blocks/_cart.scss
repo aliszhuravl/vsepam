@@ -36,6 +36,18 @@
   }
 }
 
+.cart__item_top {
+  .price_box {
+    display: flex;
+    flex-direction: column;
+    width: -webkit-fill-available;
+    align-items: flex-end;
+    margin-right: 24px;
+  }
+}
+
+
+
 .sconto {
   width: 100%;
   display: flex;

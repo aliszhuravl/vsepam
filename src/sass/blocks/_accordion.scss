@@ -152,6 +152,7 @@
         .cart_el_name {
           font-family: $font-family_bold;
           font-size: 16px;
+          white-space: nowrap;
         }
         .cart_img {
           margin-right: 20px;
@@ -160,8 +161,10 @@
           padding: 6px;
           width: 120px;
           height: 120px;
+          overflow: hidden;
           img {
             width: 100%;
+            height: 100%;
             object-fit: contain;
             display: block;
           }
@@ -297,5 +300,8 @@
   }
   .accordion__btn:after {
     right: 6px;
+  }
+  .cart_acc .accordion__btn .cart_element .cart_el_name {
+    white-space: unset;
   }
 }
